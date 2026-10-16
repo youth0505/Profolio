@@ -6,7 +6,7 @@
   <meta name="description" content="Lingfei Zhu — Applied Data Science graduate student building practical data, AI, and digitalization solutions." />
   <title>Lingfei Zhu — Applied Data Science</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Mono:wght@300;400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" /><script src="script.js" defer></script>
 </head>
 <body>
@@ -52,7 +52,57 @@
       </div>
     </section>
 
-    <section id="project" class="project section-pad" aria-labelledby="project-title"><div class="project-visual" aria-hidden="true"><div class="sonar"><i></i><i></i><i></i><b>01</b></div><div class="coordinates">37.9838° N<br/>23.7275° E</div></div><div class="project-copy reveal"><p class="section-label">/ FEATURED PROJECT · MCM/ICM 2024</p><h2 id="project-title">SEARCH.<br/><span>LOCATE.</span><br/>DECIDE.</h2><p>Built a probabilistic submersible localization and search-and-rescue model using particle filtering, Bayesian updates, simulation, and sensitivity analysis across the Ionian and Caribbean Seas.</p><div class="project-award"><strong>MERITORIOUS WINNER</strong><span>MATHEMATICAL CONTEST IN MODELING · 2024</span></div></div></section>
+    <section id="project" class="project section-pad" aria-labelledby="project-title">
+      <div class="project-copy reveal">
+        <p class="section-label">/ FEATURED PROJECT · MCM/ICM 2024</p>
+        <h2 id="project-title">SEARCH.<br/><span>LOCATE.</span><br/>DECIDE.</h2>
+        <p>Built a probabilistic submersible localization and search-and-rescue model using particle filtering, Bayesian updates, simulation, and sensitivity analysis across the Ionian and Caribbean Seas.</p>
+        <div class="project-award"><strong>MERITORIOUS WINNER</strong><span>MATHEMATICAL CONTEST IN MODELING · 2024</span></div>
+      </div>
+
+      <div class="project-visual reveal" aria-label="Interactive project visual gallery">
+        <div class="sonar" aria-hidden="true"><i></i><i></i><i></i><b>01</b></div>
+        <div class="coordinates">37.9838° N<br/>23.7275° E</div>
+        <p class="project-hint">SELECT A FRAME TO EXPAND ↗</p>
+
+        <button class="project-node node-path" type="button" data-project-image="assets/project/path.webp" data-project-title="Predicted displacement path" style="--delay:-1.3s;--drift:12px">
+          <span>01 / PATH</span><img src="assets/project/path.webp" alt="Three-dimensional predicted displacement path over underwater terrain" loading="lazy" />
+        </button>
+        <button class="project-node node-probability" type="button" data-project-image="assets/project/probability.webp" data-project-title="Location probability surface" style="--delay:-3.7s;--drift:9px">
+          <span>02 / PROBABILITY</span><img src="assets/project/probability.webp" alt="Three-dimensional probability density visualization" loading="lazy" />
+        </button>
+        <button class="project-node node-search" type="button" data-project-image="assets/project/search.webp" data-project-title="Bayesian search updates" style="--delay:-2.1s;--drift:15px">
+          <span>03 / SEARCH</span><img src="assets/project/search.webp" alt="Sequence of search probability heat maps" loading="lazy" />
+        </button>
+      </div>
+
+      <article class="workflow-feature reveal">
+        <div class="workflow-copy">
+          <p class="section-label">/ SYSTEM ARCHITECTURE</p>
+          <h3>ONE SYSTEM.<br/>THREE MODELS.</h3>
+          <p>The full framework connects underwater localization, equipment evaluation, and Bayesian search-and-rescue into one decision process—from physical assumptions and particle filtering to sensitivity analysis and future extensions.</p>
+          <div><span>01 · LOCATE</span><span>02 · EVALUATE</span><span>03 · SEARCH &amp; RESCUE</span></div>
+        </div>
+        <button class="workflow-board" type="button" data-project-image="assets/project/workflow.webp" data-project-title="Complete modelling workflow" style="--delay:-1.8s">
+          <img src="assets/project/workflow.webp" alt="Complete project workflow connecting preparation, three mathematical models, evaluation, and future work" loading="lazy" />
+          <span>EXPAND THE COMPLETE FRAMEWORK ↗</span>
+        </button>
+      </article>
+
+      <article class="leaflet-feature reveal">
+        <div class="leaflet-copy">
+          <p class="section-label">/ DESIGN SPOTLIGHT</p>
+          <h3>FROM MODEL<br/>TO MESSAGE.</h3>
+          <p>I translated a technical modelling paper into an accessible two-page editorial leaflet—shaping the information hierarchy, visual rhythm, colour system, diagrams, and narrative for a non-technical audience.</p>
+          <ul aria-label="Design skills demonstrated"><li>EDITORIAL LAYOUT</li><li>INFORMATION HIERARCHY</li><li>VISUAL STORYTELLING</li><li>DATA VISUALIZATION</li></ul>
+          <small>SELECT EITHER PAGE TO VIEW THE DETAILS ↗</small>
+        </div>
+        <div class="leaflet-spread">
+          <button class="leaflet-page" type="button" data-project-image="assets/project/leaflet-01.webp" data-project-title="Leaflet · Page 01" style="--delay:-.8s"><img src="assets/project/leaflet-01.webp" alt="First page of the underwater search-and-rescue project leaflet" loading="lazy" /><span>PAGE 01</span></button>
+          <button class="leaflet-page" type="button" data-project-image="assets/project/leaflet-02.webp" data-project-title="Leaflet · Page 02" style="--delay:-2.8s"><img src="assets/project/leaflet-02.webp" alt="Second page of the underwater search-and-rescue project leaflet" loading="lazy" /><span>PAGE 02</span></button>
+        </div>
+      </article>
+    </section>
 
     <section class="skills section-pad" aria-labelledby="skills-title"><div class="section-head reveal"><p class="section-label">/ TOOLKIT</p><h2 id="skills-title">HOW I<br/><span>BUILD.</span></h2><p>A practical toolkit for analysis, automation, visual communication, and product delivery.</p></div><div class="skill-list reveal"><article><span>01</span><h3>Data &amp; Visualization</h3><p>Power BI · Tableau · Excel · MySQL · Dashboard Design · Visual Storytelling · Information Refinement</p></article><article><span>02</span><h3>Programming &amp; AI</h3><p>Python · C · MATLAB · AI/LLM Applications · Qwen2-VL · Gradio · APIs</p></article><article><span>03</span><h3>Digitalization</h3><p>Process Automation · Workflow Optimization · KPI Dashboards · Product Solutions</p></article></div></section>
 
@@ -74,5 +124,11 @@
 
     <section id="contact" class="contact" aria-labelledby="contact-title"><div class="contact-track" aria-hidden="true">DATA WITH DIRECTION · DATA WITH DIRECTION · </div><div class="contact-inner"><p class="section-label reveal">/ CONNECT</p><h2 id="contact-title" class="reveal">LET’S TURN<br/><span>DATA INTO ACTION.</span></h2><div class="contact-links reveal"><a class="contact-button magnetic" href="mailto:ztavel0505@gmail.com"><span>EMAIL ME</span><b>↗</b></a><a class="contact-button magnetic" href="https://www.linkedin.com/in/lingfeizhu0505/" target="_blank" rel="noreferrer"><span>LINKEDIN</span><b>↗</b></a><a class="contact-button magnetic" href="ZHU_LINGFEI_Resume.pdf" target="_blank"><span>RÉSUMÉ</span><b>↓</b></a></div><div class="contact-foot"><p>© <span data-year></span> LINGFEI ZHU</p><p>LOS ANGELES, CA</p><a href="#top">BACK TO TOP ↑</a></div></div></section>
   </main>
+  <div class="project-lightbox" role="dialog" aria-modal="true" aria-label="Expanded project image" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close expanded image">CLOSE ×</button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">←</button>
+    <figure><img src="" alt="" /><figcaption><span></span><small></small></figcaption></figure>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">→</button>
+  </div>
 </body>
 </html>
