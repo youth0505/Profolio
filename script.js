@@ -14,3 +14,12 @@ if(projectTriggers.length&&projectLightbox){
   projectLightbox.addEventListener('click',event=>{if(event.target===projectLightbox)closeProjectImage()});
   document.addEventListener('keydown',event=>{if(!projectLightbox.classList.contains('open'))return;if(event.key==='Escape')closeProjectImage();if(event.key==='ArrowLeft')renderProjectImage(activeProjectIndex-1);if(event.key==='ArrowRight')renderProjectImage(activeProjectIndex+1)});
 }
+
+document.querySelectorAll('.intro-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const willOpen=card.getAttribute('aria-pressed')!=='true';
+    document.querySelectorAll('.intro-card[aria-pressed="true"]').forEach(openCard=>openCard.setAttribute('aria-pressed','false'));
+    card.setAttribute('aria-pressed',String(willOpen));
+  });
+  card.addEventListener('mouseleave',()=>{if(window.matchMedia('(pointer:fine)').matches)card.setAttribute('aria-pressed','false')});
+});
