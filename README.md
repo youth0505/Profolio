@@ -26,3 +26,5 @@ python3 -m http.server 8080
 - 如需自定义域名，在仓库根目录添加 `CNAME` 文件，内容为你的域名。
 
 网站不依赖构建工具，适合 GitHub Pages；字体通过 Google Fonts 加载，无法联网时会自动使用系统字体。
+
+更详细的内容更新、摄影作品添加、照片主色色带和 Featured Project 交互维护方式，请查看 [`MAINTENANCE.md`](MAINTENANCE.md)。
