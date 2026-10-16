@@ -18,4 +18,4 @@
 @keyframes workflow-drift{0%,100%{translate:0 0;rotate:-.15deg}50%{translate:0 -7px;rotate:.25deg}}
 @media(max-width:820px){.workflow-feature{grid-column:1;grid-template-columns:1fr;margin-inline:-18px;padding:4rem 18px}.workflow-board{box-shadow:8px 10px 0 var(--violet)}.workflow-board span{right:.8rem;bottom:.8rem;max-width:75%;font-size:.48rem}}
 @media(prefers-reduced-motion:reduce){.workflow-board{animation:none}}
-.section-head h2 span,.project h2 span,.photo-head h2 span{-webkit-text-stroke-color:var(--ink)}
+.section-head h2 span,.project h2 span,.photo-head h2 span{-webkit-text-stroke:1.5px var(--ink)!important}
