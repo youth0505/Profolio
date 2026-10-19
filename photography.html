@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Mono:wght@300;400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=profile-8" />
-  <script src="photography.js?v=archive-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=photo-1" />
+  <script src="photography.js?v=photo-1" defer></script>
 </head>
 <body class="photo-archive-page">
   <header class="archive-header">
@@ -29,7 +29,7 @@
       <div class="archive-gallery-head"><h2 id="collection-title">THE<br/>COLLECTION.</h2><p>Each photograph contributes its own dominant color to the spectrum. New work can be added continuously while the archive reorganizes itself by hue.</p></div>
       <div class="gallery-spectrum reveal" aria-label="Photographs sorted by their dominant colors"><span>DOMINANT COLOR</span><i data-photo-spectrum></i><span>SORTED 01—08+</span></div>
       <div class="exhibition-grid">
-        <figure class="exhibit reveal" data-hue="10" data-color="#c98f82" style="--photo-color:#c98f82"><div><b>01</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 01</em><small>DOMINANT COLOR</small></figcaption></figure>
+        <figure class="exhibit exhibit--photo reveal" data-hue="28" data-color="#c78352" data-image="assets/Photo/photo1.JPG" style="--photo-color:#c78352" tabindex="0" role="button" aria-label="Open Untitled 01"><div><b>01</b><img src="assets/Photo/photo1.JPG" alt="Warm backlit portrait with flowing hair" loading="lazy" /></div><figcaption><em>UNTITLED 01</em><small>WARM AMBER · OPEN ↗</small></figcaption></figure>
         <figure class="exhibit reveal" data-hue="35" data-color="#d5aa6d" style="--photo-color:#d5aa6d"><div><b>02</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 02</em><small>DOMINANT COLOR</small></figcaption></figure>
         <figure class="exhibit reveal" data-hue="72" data-color="#b7b66b" style="--photo-color:#b7b66b"><div><b>03</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 03</em><small>DOMINANT COLOR</small></figcaption></figure>
         <figure class="exhibit reveal" data-hue="127" data-color="#88ad8e" style="--photo-color:#88ad8e"><div><b>04</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 04</em><small>DOMINANT COLOR</small></figcaption></figure>
@@ -41,6 +41,11 @@
       <div class="archive-foot reveal"><p>COLOR-ORDERED EXHIBITION</p><p>The archive is designed for continuous expansion. Add a photograph, record its dominant color, and it will join the visual spectrum without changing the image itself.</p></div>
     </section>
   </main>
+
+  <div class="photo-lightbox" data-photo-lightbox aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded photograph">
+    <button class="photo-lightbox-close" type="button" data-photo-close>CLOSE ×</button>
+    <figure><img data-photo-lightbox-image alt="" /><figcaption><span data-photo-lightbox-title></span><small data-photo-lightbox-color></small></figcaption></figure>
+  </div>
 
   <footer class="archive-page-foot"><span>© <span data-year></span> LINGFEI ZHU</span><a href="#archive-title">BACK TO TOP ↑</a></footer>
 </body>
