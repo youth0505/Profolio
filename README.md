@@ -1,22 +1,6 @@
 # Lingfei Zhu — Portfolio
 
-一个可直接部署到 GitHub Pages 的个人网站。内容以 Lingfei Zhu 的简历为主，包含教育、实习经历、项目、技能、联系方式和预留的摄影作品区。视觉灵感来自高性能运动网站的编辑感、速度感和酸性色彩，但版式、内容与图形均为原创。
-
-## 本地预览
-
-```bash
-python3 -m http.server 8080
-```
-
-浏览器访问 `http://localhost:8080`。
-
-## 部署到 GitHub Pages
-
-1. 在 GitHub 新建一个空仓库。
-2. 把本目录的所有文件推送到仓库的 `main` 分支。
-3. 打开仓库的 **Settings → Pages**。
-4. 在 **Build and deployment** 中选择 **GitHub Actions**。
-5. 等待 `Deploy static site to Pages` 工作流完成。
+一个可直接部署到 GitHub Pages 的个人网站。内容以简历为主，包含教育、实习经历、项目、技能、联系方式和预留的摄影作品区。视觉灵感来自高性能运动网站的编辑感、速度感和酸性色彩，但版式、内容与图形均为原创。
 
 ## 内容更新
 
