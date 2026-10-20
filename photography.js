@@ -2,11 +2,27 @@ const year=document.querySelector('[data-year]');
 if(year)year.textContent=new Date().getFullYear();
 
 const gallery=document.querySelector('.exhibition-grid'),spectrum=document.querySelector('[data-photo-spectrum]');
-if(gallery&&spectrum){
-  const photographs=[...gallery.querySelectorAll('.exhibit')].sort((a,b)=>Number(a.dataset.hue)-Number(b.dataset.hue));
-  photographs.forEach((item,index)=>{gallery.appendChild(item);item.querySelector('b').textContent=String(index+1).padStart(2,'0')+(index===photographs.length-1?'+':'')});
-  spectrum.style.background=`linear-gradient(90deg,${photographs.map(item=>item.dataset.color).join(',')})`;
-}
+const photoCount=document.querySelector('[data-photo-count]');
+
+// Add final works here. `hue` sorts the archive around the color wheel (0–360).
+// Keep image paths relative to photography.html, e.g. assets/Photo/my-photo.webp.
+const photographs=[];
+
+const escapeHtml=value=>String(value).replace(/[&<>'"]/g,character=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[character]));
+const renderPhotographs=()=>{
+  if(!gallery||!spectrum)return;
+  const ordered=[...photographs].sort((a,b)=>a.hue-b.hue);
+  if(!ordered.length){
+    spectrum.style.background='linear-gradient(90deg,#d9cff5,#c9ebd5)';
+    if(photoCount)photoCount.textContent='SORTED 00—∞';
+    gallery.innerHTML='<div class="archive-pending reveal in-view"><span>01—∞</span><strong>THE ARCHIVE IS<br/>COMING INTO FOCUS.</strong><p>The first selection is being edited. Return soon for places, people, and passing light.</p></div>';
+    return;
+  }
+  spectrum.style.background=`linear-gradient(90deg,${ordered.map(item=>item.color).join(',')})`;
+  if(photoCount)photoCount.textContent=`SORTED 01—${String(ordered.length).padStart(2,'0')}`;
+  gallery.innerHTML=ordered.map((item,index)=>`<figure class="exhibit exhibit--photo reveal in-view" data-hue="${item.hue}" data-color="${escapeHtml(item.color)}" data-image="${escapeHtml(item.image)}" style="--photo-color:${escapeHtml(item.color)}" tabindex="0" role="button" aria-label="Open ${escapeHtml(item.title)}"><div><b>${String(index+1).padStart(2,'0')}</b><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" loading="lazy" /></div><figcaption><em>${escapeHtml(item.title)}</em><small>${escapeHtml(item.caption)} · OPEN ↗</small></figcaption></figure>`).join('');
+};
+renderPhotographs();
 
 const photoLightbox=document.querySelector('[data-photo-lightbox]');
 if(photoLightbox){

@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Mono:wght@300;400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=photo-1" />
-  <script src="photography.js?v=photo-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=photo-2" />
+  <script src="photography.js?v=photo-2" defer></script>
 </head>
 <body class="photo-archive-page">
   <header class="archive-header">
@@ -27,18 +27,9 @@
 
     <section class="archive-gallery" aria-labelledby="collection-title">
       <div class="archive-gallery-head"><h2 id="collection-title">THE<br/>COLLECTION.</h2><p>Each photograph contributes its own dominant color to the spectrum. New work can be added continuously while the archive reorganizes itself by hue.</p></div>
-      <div class="gallery-spectrum reveal" aria-label="Photographs sorted by their dominant colors"><span>DOMINANT COLOR</span><i data-photo-spectrum></i><span>SORTED 01—08+</span></div>
-      <div class="exhibition-grid">
-        <figure class="exhibit exhibit--photo reveal" data-hue="28" data-color="#c78352" data-image="assets/Photo/photo1.JPG" style="--photo-color:#c78352" tabindex="0" role="button" aria-label="Open Untitled 01"><div><b>01</b><img src="assets/Photo/photo1.JPG" alt="Warm backlit portrait with flowing hair" loading="lazy" /></div><figcaption><em>UNTITLED 01</em><small>WARM AMBER · OPEN ↗</small></figcaption></figure>
-        <figure class="exhibit reveal" data-hue="35" data-color="#d5aa6d" style="--photo-color:#d5aa6d"><div><b>02</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 02</em><small>DOMINANT COLOR</small></figcaption></figure>
-        <figure class="exhibit reveal" data-hue="72" data-color="#b7b66b" style="--photo-color:#b7b66b"><div><b>03</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 03</em><small>DOMINANT COLOR</small></figcaption></figure>
-        <figure class="exhibit reveal" data-hue="127" data-color="#88ad8e" style="--photo-color:#88ad8e"><div><b>04</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 04</em><small>DOMINANT COLOR</small></figcaption></figure>
-        <figure class="exhibit reveal" data-hue="181" data-color="#79a9aa" style="--photo-color:#79a9aa"><div><b>05</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 05</em><small>DOMINANT COLOR</small></figcaption></figure>
-        <figure class="exhibit reveal" data-hue="219" data-color="#7f96bd" style="--photo-color:#7f96bd"><div><b>06</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 06</em><small>DOMINANT COLOR</small></figcaption></figure>
-        <figure class="exhibit reveal" data-hue="280" data-color="#aa8bbd" style="--photo-color:#aa8bbd"><div><b>07</b><span>YOUR PHOTOGRAPH</span></div><figcaption><em>UNTITLED 07</em><small>DOMINANT COLOR</small></figcaption></figure>
-        <figure class="exhibit reveal" data-hue="328" data-color="#c58fae" style="--photo-color:#c58fae"><div><b>08+</b><span>THE ARCHIVE CONTINUES</span></div><figcaption><em>OPEN FRAME</em><small>NEW WORK / ONGOING</small></figcaption></figure>
-      </div>
-      <div class="archive-foot reveal"><p>COLOR-ORDERED EXHIBITION</p><p>The archive is designed for continuous expansion. Add a photograph, record its dominant color, and it will join the visual spectrum without changing the image itself.</p></div>
+      <div class="gallery-spectrum reveal" aria-label="Photographs sorted by their dominant colors"><span>DOMINANT COLOR</span><i data-photo-spectrum></i><span data-photo-count>SORTED 00—∞</span></div>
+      <div class="exhibition-grid" data-photo-gallery aria-live="polite"></div>
+      <div class="archive-foot reveal"><p>COLOR-ORDERED EXHIBITION</p><p>The archive is ready for the final selection. Once each work is added with its title, place, year, and dominant color, it joins the spectrum without changing the image itself.</p></div>
     </section>
   </main>
 

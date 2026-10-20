@@ -41,32 +41,27 @@
 
 ## 4. 摄影作品与照片主色色带
 
-主页的摄影区位于 `#photography`，现在只作为入口，链接到独立的 `photography.html`。完整照片容器位于摄影页的 `.exhibition-grid`，排序逻辑在 `photography.js`。
+主页的摄影区位于 `#photography`，现在只作为入口，链接到独立的 `photography.html`。完整照片容器位于摄影页的 `.exhibition-grid`，照片数据和排序逻辑在 `photography.js` 的 `photographs` 数组中。临时样片已移除，页面会在作品数据为空时显示档案筹备状态。
 
-每张作品使用以下结构：
+每张作品在 `photography.js` 的 `photographs` 数组中使用以下结构：
 
 ```html
-<figure class="exhibit reveal"
-        data-hue="35"
-        data-color="#d5aa6d"
-        style="--photo-color:#d5aa6d">
-  <div>
-    <b>02</b>
-    <img src="photos/photo-02.jpg" alt="照片内容描述">
-  </div>
-  <figcaption>
-    <em>作品标题</em>
-    <small>拍摄地点 / 年份</small>
-  </figcaption>
-</figure>
+{
+  title: 'UNTITLED 01',
+  caption: 'LOS ANGELES · 2026',
+  image: 'assets/Photo/photo-01.webp',
+  alt: '照片内容描述',
+  color: '#d5aa6d',
+  hue: 35
+}
 ```
 
 维护步骤：
 
-1. 将优化后的图片放入 `photos/` 文件夹，建议使用 WebP 或压缩后的 JPEG。
-2. 为每张照片提取一个主色，填写到 `data-color` 和 `--photo-color`。
-3. 将主色转换为色相角度并填写到 `data-hue`，范围为 0–360。
-4. `photography.js` 会按照 `data-hue` 自动排列照片，并用全部 `data-color` 生成顶部连续色带。
+1. 将优化后的图片放入 `assets/Photo/` 文件夹，建议使用 WebP 或压缩后的 JPEG。
+2. 在 `photographs` 数组为每张作品填写标题、地点/年份、相对图片路径、无障碍描述、主色和色相角度。
+3. 主色填写到 `color`，将该主色转换为 0–360 的色相角度填写到 `hue`。
+4. `photography.js` 会按照 `hue` 自动排列照片，并用全部 `color` 生成顶部连续色带。
 5. 不对原照片套统一滤镜，色带只用于说明作品之间的颜色过渡。
 6. 横图、竖图和方图可以混排；新增大量作品时应同时检查桌面端和手机端。
 
